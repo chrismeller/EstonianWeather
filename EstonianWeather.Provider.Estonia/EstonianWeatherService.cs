@@ -57,7 +57,7 @@ namespace EstonianWeather.Provider.Estonia
 
                 var images = new List<RadarImage>();
                 var imageNodes = doc.DocumentNode.SelectNodes(".//img[ contains( @class, 'radar-image' ) ]");
-                foreach(var image in imageNodes)
+                foreach (var image in imageNodes)
                 {
                     var src = image.GetAttributeValue("src", "");
                     var capturedTimestamp = image.GetAttributeValue("data-datetime", 0);

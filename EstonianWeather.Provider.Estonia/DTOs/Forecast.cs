@@ -47,7 +47,7 @@ namespace EstonianWeather.Provider.Estonia.DTOs
     }
 
     public class Night : NightAndDay
-    { 
+    {
         [XmlElement("place")]
         public List<PlaceNight> Places { get; set; }
     }
@@ -68,7 +68,7 @@ namespace EstonianWeather.Provider.Estonia.DTOs
     }
 
     public class PlaceNight : Place
-    { 
+    {
         [XmlElement("tempmin")]
         public string TempMin { get; set; }
     }

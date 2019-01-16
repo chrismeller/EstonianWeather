@@ -1,6 +1,6 @@
-﻿using System.Threading.Tasks;
-using EstonianWeather.Provider.Estonia;
+﻿using EstonianWeather.Provider.Estonia;
 using EstonianWeather.Provider.Finland;
+using System.Threading.Tasks;
 
 namespace EstonianWeather.Host
 {

@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28010.2036
+VisualStudioVersion = 15.0.28307.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstonianWeather.Host", "EstonianWeather.Host\EstonianWeather.Host.csproj", "{0472D47D-94AD-4E59-A35D-27960A288747}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstonianWeather.Host", "EstonianWeather.Host\EstonianWeather.Host.csproj", "{EAB371DD-2924-4D74-9978-EAE71359B793}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstonianWeather.Provider.Estonia", "EstonianWeather.Provider.Estonia\EstonianWeather.Provider.Estonia.csproj", "{7B067D83-8FDE-4994-AA31-80AD094B9A23}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Providers", "Providers", "{701966EC-C90B-4998-A306-DF5790FB16AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstonianWeather.Provider.Finland", "EstonianWeather.Provider.Finland\EstonianWeather.Provider.Finland.csproj", "{C58863CA-3244-4B7B-AE4E-3C27EB544FAE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstonianWeather.Provider.Estonia", "EstonianWeather.Provider.Estonia\EstonianWeather.Provider.Estonia.csproj", "{F838B287-DB94-4D29-8DE3-ED8EAE31D472}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstonianWeather.Provider.Finland", "EstonianWeather.Provider.Finland\EstonianWeather.Provider.Finland.csproj", "{B9DA6530-708A-4016-BD90-7649037DAC1A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,23 +17,27 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0472D47D-94AD-4E59-A35D-27960A288747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0472D47D-94AD-4E59-A35D-27960A288747}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0472D47D-94AD-4E59-A35D-27960A288747}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0472D47D-94AD-4E59-A35D-27960A288747}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7B067D83-8FDE-4994-AA31-80AD094B9A23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7B067D83-8FDE-4994-AA31-80AD094B9A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7B067D83-8FDE-4994-AA31-80AD094B9A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7B067D83-8FDE-4994-AA31-80AD094B9A23}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C58863CA-3244-4B7B-AE4E-3C27EB544FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C58863CA-3244-4B7B-AE4E-3C27EB544FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C58863CA-3244-4B7B-AE4E-3C27EB544FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C58863CA-3244-4B7B-AE4E-3C27EB544FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAB371DD-2924-4D74-9978-EAE71359B793}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAB371DD-2924-4D74-9978-EAE71359B793}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAB371DD-2924-4D74-9978-EAE71359B793}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAB371DD-2924-4D74-9978-EAE71359B793}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F838B287-DB94-4D29-8DE3-ED8EAE31D472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F838B287-DB94-4D29-8DE3-ED8EAE31D472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F838B287-DB94-4D29-8DE3-ED8EAE31D472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F838B287-DB94-4D29-8DE3-ED8EAE31D472}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9DA6530-708A-4016-BD90-7649037DAC1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9DA6530-708A-4016-BD90-7649037DAC1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9DA6530-708A-4016-BD90-7649037DAC1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9DA6530-708A-4016-BD90-7649037DAC1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F838B287-DB94-4D29-8DE3-ED8EAE31D472} = {701966EC-C90B-4998-A306-DF5790FB16AF}
+		{B9DA6530-708A-4016-BD90-7649037DAC1A} = {701966EC-C90B-4998-A306-DF5790FB16AF}
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F548F197-611D-46BD-8BB9-5ADA26F9E6E7}
+		SolutionGuid = {E4A502E2-A5E5-4487-A661-EE8504EEE5F6}
 	EndGlobalSection
 EndGlobal
