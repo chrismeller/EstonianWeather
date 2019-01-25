@@ -57,7 +57,7 @@ namespace EstonianWeather.Provider.Estonia
         {
             using (var client = new HttpClient())
             {
-                var response = await client.GetAsync("https://www.ilmateenistus.ee/ilm/ilmavaatlused/radaripildid/komposiitpilt/?lang=en&ajax=1537947680747");
+                var response = await client.GetAsync("https://www.ilmateenistus.ee/ilm/ilmavaatlused/radaripildid/komposiitpilt/?lang=en");
                 response.EnsureSuccessStatusCode();
 
                 var content = await response.Content.ReadAsStringAsync();

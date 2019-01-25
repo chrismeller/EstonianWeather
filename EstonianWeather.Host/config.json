@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "EstonianWeather.Data.ApplicationDbContext": "Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=EstonianWeather;Integrated Security=True"
+  }
+}
