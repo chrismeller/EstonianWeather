@@ -18,12 +18,17 @@ namespace EstonianWeather.Provider.Estonia
                 var response = await client.GetAsync("http://www.ilmateenistus.ee/ilma_andmed/xml/observations.php");
                 response.EnsureSuccessStatusCode();
 
-                var content = await response.Content.ReadAsStringAsync();
+                // content is served with the wrong encoding, so we need to convert it
+                var contentStream = await response.Content.ReadAsStreamAsync();
+                using (var sr = new StreamReader(contentStream, System.Text.Encoding.GetEncoding("iso-8859-1"), true))
+                {
+                    var content = await sr.ReadToEndAsync();
 
-                var serializer = new XmlSerializer(typeof(Observations));
-                var observations = (Observations)serializer.Deserialize(new StringReader(content));
+                    var serializer = new XmlSerializer(typeof(Observations));
+                    var observations = (Observations) serializer.Deserialize(new StringReader(content));
 
-                return observations;
+                    return observations;
+                }
             }
         }
 
@@ -34,12 +39,17 @@ namespace EstonianWeather.Provider.Estonia
                 var response = await client.GetAsync("http://www.ilmateenistus.ee/ilma_andmed/xml/forecast.php?lang=eng");
                 response.EnsureSuccessStatusCode();
 
-                var content = await response.Content.ReadAsStringAsync();
+                // content is served with the wrong encoding, so we need to convert it
+                var contentStream = await response.Content.ReadAsStreamAsync();
+                using (var sr = new StreamReader(contentStream, System.Text.Encoding.GetEncoding("iso-8859-1"), true))
+                {
+                    var content = await sr.ReadToEndAsync();
 
-                var serializer = new XmlSerializer(typeof(ForecastsWrapper));
-                var forecasts = (ForecastsWrapper)serializer.Deserialize(new StringReader(content));
+                    var serializer = new XmlSerializer(typeof(ForecastsWrapper));
+                    var forecasts = (ForecastsWrapper) serializer.Deserialize(new StringReader(content));
 
-                return forecasts.Forecasts;
+                    return forecasts.Forecasts;
+                }
             }
         }
 
