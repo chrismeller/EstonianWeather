@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EstonianWeather.Data\EstonianWeather.Data.csproj" />
     <ProjectReference Include="..\EstonianWeather.Provider.Estonia\EstonianWeather.Provider.Estonia.csproj" />
     <ProjectReference Include="..\EstonianWeather.Provider.Finland\EstonianWeather.Provider.Finland.csproj" />
   </ItemGroup>
