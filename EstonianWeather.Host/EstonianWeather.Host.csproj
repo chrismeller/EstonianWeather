@@ -6,7 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\EstonianWeather.Data\EstonianWeather.Data.csproj" />
+    <ProjectReference Include="..\EstonianWeather.Domain\EstonianWeather.Domain.csproj" />
     <ProjectReference Include="..\EstonianWeather.Provider.Estonia\EstonianWeather.Provider.Estonia.csproj" />
     <ProjectReference Include="..\EstonianWeather.Provider.Finland\EstonianWeather.Provider.Finland.csproj" />
   </ItemGroup>

@@ -11,7 +11,7 @@ namespace EstonianWeather.Data.Models
         public Guid RequestId { get; set; }
 
         // this is the textual location we searched for
-        public string RequestedLocation { get; set; }
+        public string RequestLocation { get; set; }
 
         public DateTimeOffset RequestedAt { get; set; }
 
